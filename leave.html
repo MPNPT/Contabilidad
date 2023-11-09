@@ -1,0 +1,14 @@
+<script>
+    const tabLinks = document.querySelectorAll('.tab-link');
+    const tabContents = document.querySelectorAll('.tab-content');
+
+    tabLinks.forEach((link, index) => {
+        link.addEventListener('click', () => {
+            // Oculta todos los contenidos de las pestañas
+            tabContents.forEach(content => content.classList.remove('active'));
+            
+            // Muestra el contenido de la pestaña seleccionada
+            tabContents[index].classList.add('active');
+        });
+    });
+</script>
